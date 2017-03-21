@@ -14,7 +14,7 @@ def draw_grid():
         pygame.draw.line(screen, dark_blue, (0, y), (width, y))
 
 
-def get_cells(density=0.6):
+def get_cells(density=0.2):
     cells = {}
     for c in range(columns):
         for r in range(rows):
@@ -61,7 +61,9 @@ screen = pygame.display.set_mode(size)
 cells = get_cells()
 
 while True:
-    clock.tick(2)
+
+    clock.tick(1)
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
